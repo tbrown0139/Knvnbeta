@@ -3,45 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beta Opportunities</title>
+  <title>Knovon Beta Opportunities</title>
   <style>
+    /* General Styles */
     body {
       font-family: 'SF Pro', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      color: #333;
+      text-align: center;
     }
-    h1 {
+    header {
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    header img {
+      max-width: 150px;
+    }
+    header h1 {
       font-size: 2.5rem;
-      margin: 2rem 0;
+      margin: 1rem 0;
+      font-weight: bold;
     }
+    header p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Card Section */
     .card-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      width: 90%;
+      padding: 2rem;
       max-width: 1200px;
+      margin: 0 auto;
     }
     .card {
       position: relative;
-      border-radius: 16px;
+      border-radius: 20px;
       overflow: hidden;
-      background: #ccc;
+      background: #eee;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
     .card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter: brightness(0.8);
     }
     .card .gradient {
       position: absolute;
@@ -50,6 +69,7 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+      z-index: 1;
     }
     .card .title {
       position: absolute;
@@ -58,34 +78,56 @@
       transform: translateX(-50%);
       color: white;
       font-size: 1.5rem;
-      text-align: center;
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 2rem;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <h1>Explore Beta Opportunities</h1>
+  <!-- Header Section -->
+  <header>
+    <img src="https://your-logo-url.com/knovon-beta-logo.png" alt="Knovon Beta Logo">
+    <h1>Knovon Beta Opportunities</h1>
+    <p>
+      Welcome to Knovon Beta Opportunities. Here, you can explore and participate in our latest beta projects, providing feedback that helps us shape the future. Click on a project to learn more!
+    </p>
+  </header>
+
+  <!-- Card Section -->
   <div class="card-container">
     <div class="card">
-      <img src="image1.jpg" alt="Beta 1">
+      <img src="image1.jpg" alt="Beta Opportunity 1">
       <div class="gradient"></div>
       <div class="title">Beta Opportunity 1</div>
     </div>
     <div class="card">
-      <img src="image2.jpg" alt="Beta 2">
+      <img src="image2.jpg" alt="Beta Opportunity 2">
       <div class="gradient"></div>
       <div class="title">Beta Opportunity 2</div>
     </div>
     <div class="card">
-      <img src="image3.jpg" alt="Beta 3">
+      <img src="image3.jpg" alt="Beta Opportunity 3">
       <div class="gradient"></div>
       <div class="title">Beta Opportunity 3</div>
     </div>
     <div class="card">
-      <img src="image4.jpg" alt="Beta 4">
+      <img src="image4.jpg" alt="Beta Opportunity 4">
       <div class="gradient"></div>
       <div class="title">Beta Opportunity 4</div>
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2024 Knovon. All rights reserved.
+  </footer>
 </body>
 </html>
